@@ -1,16 +1,16 @@
-package botInstance;
+package com.example.currencyratetelegrambot.botInstance;
 
 
 
-import config.BotConfig;
+import com.example.currencyratetelegrambot.config.BotConfig;
 import lombok.AllArgsConstructor;
-import model.CurrencyModel;
+import com.example.currencyratetelegrambot.model.CurrencyModel;
 import org.springframework.stereotype.Component;
 import org.telegram.telegrambots.bots.TelegramLongPollingBot;
 import org.telegram.telegrambots.meta.api.methods.send.SendMessage;
 import org.telegram.telegrambots.meta.api.objects.Update;
 import org.telegram.telegrambots.meta.exceptions.TelegramApiException;
-import service.CurrencyService;
+import com.example.currencyratetelegrambot.service.CurrencyService;
 
 import java.io.IOException;
 import java.text.ParseException;

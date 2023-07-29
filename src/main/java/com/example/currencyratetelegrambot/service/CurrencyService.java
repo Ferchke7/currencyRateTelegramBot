@@ -1,12 +1,10 @@
-package service;
+package com.example.currencyratetelegrambot.service;
 
-import model.CurrencyModel;
-import netscape.javascript.JSObject;
+import com.example.currencyratetelegrambot.model.CurrencyModel;
 import org.json.JSONObject;
 
 import java.io.IOException;
 import java.io.InputStream;
-import java.net.MalformedURLException;
 import java.net.URL;
 import java.text.ParseException;
 import java.text.SimpleDateFormat;

@@ -1,4 +1,4 @@
-package model;
+package com.example.currencyratetelegrambot.model;
 
 import lombok.Data;
 
