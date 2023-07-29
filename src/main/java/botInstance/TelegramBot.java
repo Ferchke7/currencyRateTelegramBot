@@ -2,7 +2,9 @@ package botInstance;
 
 
 import config.BotConfig;
+import lombok.AllArgsConstructor;
 import model.CurrencyModel;
+import org.springframework.stereotype.Component;
 import org.telegram.telegrambots.bots.TelegramLongPollingBot;
 import org.telegram.telegrambots.meta.api.methods.send.SendMessage;
 import org.telegram.telegrambots.meta.api.objects.Update;
@@ -12,6 +14,8 @@ import service.CurrencyService;
 import java.io.IOException;
 import java.text.ParseException;
 
+@Component
+@AllArgsConstructor
 public class TelegramBot extends TelegramLongPollingBot {
     private final BotConfig botConfig;
 
