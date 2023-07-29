@@ -71,7 +71,7 @@ public class TelegramBot extends TelegramLongPollingBot {
         sendMessage.setText(textToSend);
         try {
             execute(sendMessage);
-        } catch (TelegramApiException e) {
+        } catch (TelegramApiException ignored) {
 
         }
     }
