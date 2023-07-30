@@ -1,5 +1,7 @@
 # currencyRateTelegramBot
-![Uploading DogGlossary.gif…]()
+
+
+![CurrencyRateTelegram](https://github.com/Ferchke7/currencyRateTelegramBot/assets/90718581/96376df7-f1d6-4637-b7a3-b6dd537368df)
 
 **CurrencyService Documentation**
 
