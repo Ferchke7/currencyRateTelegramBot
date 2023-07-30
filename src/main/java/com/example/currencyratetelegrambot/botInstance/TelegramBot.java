@@ -42,10 +42,13 @@ public class TelegramBot extends TelegramLongPollingBot {
             String messageText = update.getMessage().getText();
             long chatId = update.getMessage().getChatId();
 
-            switch (messageText) {
+            switch (messageText.toLowerCase()) {
                 case "/start":
                     startCommandReceived(chatId,update.getMessage().getChat()
                             .getFirstName());
+                    break;
+                case "/startkorean":
+                    startCommandReceivedInKorean(chatId, update.getMessage().getChat().getFirstName());
                     break;
                 default:
                     try {
@@ -68,6 +71,12 @@ public class TelegramBot extends TelegramLongPollingBot {
                 + "Enter the currency whose official exchange rate " +
                 "\nyou want to know in relation to KRW. " +
                 "For example: USD";
+        sendMessage(chatId,answer);
+    }
+    private void startCommandReceivedInKorean(Long chatId, String name) {
+        String answer = "안녕하세요, " + name + "님!" + "\n"
+                + "원화와 관련하는 공식 환율을 알고자 하시는다면 입력하십시오 " +
+                "\n예:USD";
         sendMessage(chatId,answer);
     }
 
