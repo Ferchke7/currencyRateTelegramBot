@@ -47,9 +47,9 @@ public class TelegramBot extends TelegramLongPollingBot {
                     startCommandReceived(chatId,update.getMessage().getChat()
                             .getFirstName());
                     break;
-                case "/startkorean":
-                    startCommandReceivedInKorean(chatId, update.getMessage().getChat().getFirstName());
-                    break;
+//                case "/startkorean":
+//                    startCommandReceivedInKorean(chatId, update.getMessage().getChat().getFirstName());
+//                    break;
                 default:
                     try {
                         currency = CurrencyService.getCurrencyRate(messageText,currencyModel);
@@ -73,12 +73,12 @@ public class TelegramBot extends TelegramLongPollingBot {
                 "For example: USD";
         sendMessage(chatId,answer);
     }
-    private void startCommandReceivedInKorean(Long chatId, String name) {
-        String answer = "안녕하세요, " + name + "님!" + "\n"
-                + "원화와 관련하는 공식 환율을 알고자 하시는다면 입력하십시오 " +
-                "\n예:USD";
-        sendMessage(chatId,answer);
-    }
+//    private void startCommandReceivedInKorean(Long chatId, String name) {
+//        String answer = "안녕하세요, " + name + "님!" + "\n"
+//                + "원화와 관련하는 공식 환율을 알고자 하시는다면 입력하십시오 " +
+//                "\n예:USD";
+//        sendMessage(chatId,answer);
+//    }
 
     private void sendMessage(Long chatId, String textToSend) {
         SendMessage sendMessage = new SendMessage();
