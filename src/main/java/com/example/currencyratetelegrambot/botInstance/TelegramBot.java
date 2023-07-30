@@ -6,6 +6,7 @@ import com.example.currencyratetelegrambot.config.BotConfig;
 import lombok.AllArgsConstructor;
 import com.example.currencyratetelegrambot.model.CurrencyModel;
 import org.springframework.stereotype.Component;
+import org.telegram.telegrambots.bots.DefaultBotOptions;
 import org.telegram.telegrambots.bots.TelegramLongPollingBot;
 import org.telegram.telegrambots.meta.api.methods.send.SendMessage;
 import org.telegram.telegrambots.meta.api.objects.Update;
@@ -16,10 +17,15 @@ import java.io.IOException;
 import java.text.ParseException;
 
 @Component
-@AllArgsConstructor
+
 public class TelegramBot extends TelegramLongPollingBot {
     private final BotConfig botConfig;
 
+    public TelegramBot(BotConfig botConfig) {
+        super(botConfig.getToken());
+
+        this.botConfig = botConfig;
+    }
 
     @Override
     public String getBotUsername() {

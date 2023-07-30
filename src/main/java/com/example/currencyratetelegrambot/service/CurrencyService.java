@@ -18,7 +18,6 @@ public class CurrencyService {
         while (scanner.hasNext()) {
             result += scanner.nextLine();
         }
-
         JSONObject object = new JSONObject(result);
         model.setCode(object.getString("code"));
         model.setDate(new SimpleDateFormat("yyyy-MM-dd").parse(object.getString("date")));
